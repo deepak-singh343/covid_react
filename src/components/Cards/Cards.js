@@ -13,7 +13,7 @@ const Cards=({data:{confirmed,recovered,deaths,lastUpdate}})=> {
     return (
         <div className={styles.container}>
             <Grid container spacing={3} >
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.infected)}>
+                <Grid item component={Card} xs={12} md={3} lg={3} className={cx(styles.card,styles.infected)}>
                     <CardContent>
                         <Typography color='textSecondary' gutterBottom>
                             Infected
@@ -29,12 +29,12 @@ const Cards=({data:{confirmed,recovered,deaths,lastUpdate}})=> {
                         <Typography color='textSecondary'>
                             {new Date(lastUpdate).toDateString()}
                         </Typography>
-                        <Typography variant='body2'>
-                            Active cases
+                        <Typography variant='body-3'>
+                            Total Active cases
                         </Typography>
                     </CardContent>
                 </Grid>
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.recovered)}>
+                <Grid item component={Card} xs={12} md={3} lg={3}className={cx(styles.card,styles.recovered)}>
                     <CardContent>
                         <Typography color='textSecondary' gutterBottom>
                             Recovered
@@ -50,12 +50,12 @@ const Cards=({data:{confirmed,recovered,deaths,lastUpdate}})=> {
                         <Typography color='textSecondary'>
                             {new Date(lastUpdate).toDateString()}
                         </Typography>
-                        <Typography variant='body2'>
-                           REcoverdData
+                        <Typography variant='body-3'>
+                           Total Recoverd people
                         </Typography>
                     </CardContent>
                 </Grid>
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.deaths)}>
+                <Grid item component={Card} xs={12} md={3} lg={3} className={cx(styles.card,styles.deaths)}>
                     <CardContent>
                         <Typography color='textSecondary' gutterBottom>
                             Deaths
@@ -71,7 +71,7 @@ const Cards=({data:{confirmed,recovered,deaths,lastUpdate}})=> {
                         <Typography color='textSecondary'>
                             {new Date(lastUpdate).toDateString()}
                         </Typography>
-                        <Typography variant='body2'>
+                        <Typography variant='body-3'>
                             Total deaths
                         </Typography>
                     </CardContent>
